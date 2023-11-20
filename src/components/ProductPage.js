@@ -10,12 +10,6 @@ import {
 } from "react-native";
 import React, { useState } from "react";
 import { AntDesign } from "@expo/vector-icons";
-
-import shoe1 from "../images/shoe1.jpg";
-import shoe2 from "../images/shoe2.jpg";
-import shoe3 from "../images/shoe3.jpg";
-import shoe4 from "../images/shoe4.jpg";
-import shoe5 from "../images/shoe5.jpg";
 import BottomSheet, { BottomSheetScrollView } from "@gorhom/bottom-sheet";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
@@ -24,12 +18,14 @@ const { height, width } = Dimensions.get("screen");
 const ITEM_WIDTH = width;
 const ITEM_HEIGHT = height * 0.75;
 
-const product = {
-  title: "Air Jordan 1 Low OG",
-  description:
-    "The Air Jordan 1 Low OG remakes the classic sneaker with new colors and textures. Premium materials and accents give fresh expression to an all-time favorite. \n\nShown: Black/Tech Grey/White/Muslin \nStyle: CZ0790-001",
-  price: "Rs. 8450.00",
-};
+// const product = {
+//   title: "Air Jordan 1 Low OG",
+//   description:
+//     "The Air Jordan 1 Low OG remakes the classic sneaker with new colors and textures. Premium materials and accents give fresh expression to an all-time favorite. \n\nShown: Black/Tech Grey/White/Muslin \nStyle: CZ0790-001",
+//   price: "Rs. 8450.00",
+// };
+
+// const imgs = [shoe5, shoe4, shoe1, shoe2, shoe3];
 
 const sizes = [
   { uk: "5", selected: false },
@@ -42,9 +38,7 @@ const sizes = [
   { uk: "12", selected: false },
 ];
 
-const imgs = [shoe5, shoe4, shoe1, shoe2, shoe3];
-
-export default function ProductPage() {
+export default function ProductPage({title,description,price,imgs}) {
   const [selectedSize, setSelectSize] = useState("");
   const [shoeSize, setShoeSize] = useState(sizes);
 
@@ -86,12 +80,12 @@ export default function ProductPage() {
         <BottomSheetScrollView>
           <View style={{ marginHorizontal: 15, marginTop: 30, gap: 10 }}>
             <Text style={{ fontSize: 32, fontWeight: "bold", margin: 5 }}>
-              {product.title}
+              {title}
             </Text>
             <Text style={{ fontSize: 22, fontWeight: "bold", margin: 5 }}>
-              {product.price}
+              {price}
             </Text>
-            <Text style={{ margin: 5 }}>{product.description}</Text>
+            <Text style={{ margin: 5 }}>{description}</Text>
             <Text style={{ fontWeight: "600", marginLeft: 15, marginTop: 25 }}>
               Select size
             </Text>
@@ -161,7 +155,7 @@ export default function ProductPage() {
               }}
             >
               <Text>
-                Favourite <AntDesign name="hearto" size={24} color="black" />
+                Favourite <AntDesign name="hearto" size={14} color="black" />
               </Text>
             </TouchableOpacity>
           </View>
