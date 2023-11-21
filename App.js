@@ -4,18 +4,24 @@ import "react-native-gesture-handler";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import AllProducts from "./src/components/AllProducts";
 import HomePage from "./src/components/HomePage";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { NavigationContainer } from "@react-navigation/native";
+import ProductPage from "./src/components/ProductPage";
 
 export default function App() {
-  
+  const Stack = createNativeStackNavigator();
   return (
-    <GestureHandlerRootView>
-      <View>
-        <StatusBar hidden />
-        <AllProducts/>
-        {/* <HomePage/> */}
-      </View>
-    </GestureHandlerRootView>
-   
+    <NavigationContainer>
+      <GestureHandlerRootView style={{flex:1}}>
+        <Stack.Navigator screenOptions={{
+          headerShown:false
+        }}>
+          <Stack.Screen name="Home" component={HomePage} />
+          <Stack.Screen name="AllShoes" component={AllProducts} />
+          <Stack.Screen name="Product" component={ProductPage}/>
+        </Stack.Navigator>
+      </GestureHandlerRootView>
+    </NavigationContainer>
   );
 }
 

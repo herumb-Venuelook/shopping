@@ -44,12 +44,29 @@ import shoe5g from "../src/images/shoe5g.jpg";
 import shoe5h from "../src/images/shoe5h.jpg";
 import shoe5i from "../src/images/shoe5i.jpg";
 
-
 import shoe6a from "../src/images/shoe6a.jpg";
 import shoe6b from "../src/images/shoe6b.jpg";
 import shoe6c from "../src/images/shoe6c.jpg";
 import shoe6d from "../src/images/shoe6d.jpg";
 import shoe6e from "../src/images/shoe6e.jpg";
+
+import shoe7a from "../src/images/shoe7a.jpg";
+import shoe7b from "../src/images/shoe7b.jpg";
+import shoe7c from "../src/images/shoe7c.jpg";
+import shoe7d from "../src/images/shoe7d.jpg";
+import shoe7e from "../src/images/shoe7e.jpg";
+import shoe7f from "../src/images/shoe7f.jpg";
+import shoe7g from "../src/images/shoe7g.jpg";
+import shoe7h from "../src/images/shoe7h.jpg";
+
+import shoe8a from "../src/images/shoe8a.jpg";
+import shoe8b from "../src/images/shoe8b.jpg";
+import shoe8c from "../src/images/shoe8c.jpg";
+import shoe8d from "../src/images/shoe8d.jpg";
+import shoe8e from "../src/images/shoe8e.jpg";
+import shoe8f from "../src/images/shoe8f.jpg";
+import shoe8g from "../src/images/shoe8g.jpg";
+import shoe8h from "../src/images/shoe8h.jpg";
 
 export default Data = [
   {
@@ -89,14 +106,40 @@ export default Data = [
     title: "Nike Superfly 9 Elite Mercurial Dream Speed",
     description:
       "You've perfected your skill through endless training and channelled your inner fire into your craft. Now, when the weight of the match is squarely on your shoulders, rise to the occasion and deliver. Bold reds and gentle oranges speak to the fearless-yet-grounded attitude needed to embrace these pressure-packed moments. Loaded with a football-specific Zoom Air unit and sticky touch, the Elite boot helps you—and the world's biggest stars—take your game to the next level and put the pedal down in the waning minutes of a match, when it matters most.\n\nColour Shown: Light Crimson/Bright Mandarin/Black/Pale Ivory\n Style: FD1157-600",
-    price : "₹ 25095.00",
-    imgs : [shoe5e, shoe5d, shoe5a, shoe5b, shoe5c, shoe5f, shoe5g, shoe5h,shoe5i]
+    price: "₹ 25095.00",
+    imgs: [
+      shoe5e,
+      shoe5d,
+      shoe5a,
+      shoe5b,
+      shoe5c,
+      shoe5f,
+      shoe5g,
+      shoe5h,
+      shoe5i,
+    ],
   },
   {
-    id : 5,
-    title : "BOOTS WITH DENTED TREAD",
-    description : "Monochrome Chelsea boots. Elastic gores on both sides of the calf. Front and back pull tabs for slipping on with ease. Round toe. Welt detail around the upper. Chunky track sole.",
-    price : "₹ 4,990.00",
-    imgs : [shoe6a,shoe6b,shoe6c,shoe6d,shoe6e]
-  }
+    id: 5,
+    title: "BOOTS WITH DENTED TREAD",
+    description:
+      "Monochrome Chelsea boots. Elastic gores on both sides of the calf. Front and back pull tabs for slipping on with ease. Round toe. Welt detail around the upper. Chunky track sole.",
+    price: "₹ 4,990.00",
+    imgs: [shoe6a, shoe6b, shoe6c, shoe6d, shoe6e],
+  },
+  {
+    id: 6,
+    title: "Nike Air Max 1",
+    description:
+      "Meet the leader of the pack. Walking on clouds above the noise, the Air Max 1 blends timeless design with cushioned comfort. Sporting a fast-paced look, wavy mudguard and Nike Air, this classic icon hit the scene in '87 and continues to be the soul of the franchise today.\n\nColour Shown: White/Pure Platinum/Medium Olive/Black\n    Style: FD9082-102",
+    price: "₹ 12795.00",
+    imgs: [shoe7a, shoe7b, shoe7c, shoe7d, shoe7e, shoe7f, shoe7g, shoe7h],
+  },
+  {
+    id: 7,
+    title: "Air Jordan 1 Mid",
+    description:"Inspired by the original AJ1, this mid-top edition maintains the iconic look you love while choice colours and crisp leather give it a distinct identity.\n\nColour Shown: Lucky Green/White/Black\n Style: DQ8426-301",
+    price: "₹ 12795.00",
+    imgs: [shoe8a, shoe8b, shoe8c, shoe8d, shoe8e, shoe8f, shoe8g, shoe8h],
+  },
 ];

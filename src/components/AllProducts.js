@@ -4,9 +4,9 @@ import Data from "../../data/Data";
 import ProductPage from "./ProductPage";
 import { PanGestureHandler } from "react-native-gesture-handler";
 
-export default function AllProducts() {
+export default function AllProducts({ navigation }) {
   const products = Data;
-  console.log(products)
+  // console.log(products)
   return (
     <PanGestureHandler>
       <View>
@@ -19,6 +19,7 @@ export default function AllProducts() {
           renderItem={({ item }) => {
             return (
               <ProductPage
+                navigation={navigation}
                 title={item.title}
                 description={item.description}
                 price={item.price}
