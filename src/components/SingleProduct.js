@@ -46,7 +46,7 @@ export default function SingleProduct({route,navigation}) {
     };
   
     return (
-      <View style={{ height: height }}>
+      <View style={{ height: height,backgroundColor:'white' }}>
         <View style={{ height: ITEM_HEIGHT, overflow: "hidden" }}>
           <Ionicons
             onPress={() => navigation.navigate("Home")}
