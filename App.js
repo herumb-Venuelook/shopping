@@ -7,6 +7,11 @@ import HomePage from "./src/components/HomePage";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationContainer } from "@react-navigation/native";
 import ProductPage from "./src/components/ProductPage";
+import SingleProduct from "./src/components/SingleProduct";
+import { LogBox } from 'react-native';
+
+LogBox.ignoreLogs(['Warning: ...']); //Hide warnings
+LogBox.ignoreAllLogs();
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -19,6 +24,7 @@ export default function App() {
           <Stack.Screen name="Home" component={HomePage} />
           <Stack.Screen name="AllShoes" component={AllProducts} />
           <Stack.Screen name="Product" component={ProductPage}/>
+          <Stack.Screen name = "Prod" component={SingleProduct} />
         </Stack.Navigator>
       </GestureHandlerRootView>
     </NavigationContainer>
@@ -32,3 +38,4 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
 });
+

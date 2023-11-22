@@ -55,7 +55,7 @@ export default function ProductPage({
     <View style={{ height: height }}>
       <View style={{ height: ITEM_HEIGHT, overflow: "hidden" }}>
         <Ionicons
-        onPress={()=>navigation.navigate("Home")}
+          onPress={() => navigation.navigate("Home")}
           style={{
             position: "absolute",
             left: 0.07 * width,

@@ -12,7 +12,7 @@ import React from "react";
 import Data from "../../data/Data";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
-export default function HomePage({navigation}) {
+export default function HomePage({ navigation }) {
   const products = Data;
   return (
     <View
@@ -28,7 +28,14 @@ export default function HomePage({navigation}) {
         style={{ marginBottom: 10, marginHorizontal: "4%", flexGrow: 1 }}
         showsVerticalScrollIndicator={false}
       >
-        <View style={{flexDirection:'row',alignItems:'center',justifyContent:'space-between',marginTop:20}}>
+        <View
+          style={{
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "space-between",
+            marginTop: 20,
+          }}
+        >
           <Text
             style={{
               fontSize: 16,
@@ -40,12 +47,23 @@ export default function HomePage({navigation}) {
           >
             All shoes
           </Text>
-          <TouchableOpacity onPress={()=>{navigation.navigate("AllShoes")}} style={{backgroundColor:'black',height : 40,width:100,alignItems:'center',justifyContent:'center'}} >
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate("AllShoes");
+            }}
+            style={{
+              backgroundColor: "black",
+              height: 40,
+              width: 100,
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
             <Text
               style={{
                 fontSize: 16,
                 fontWeight: 500,
-                color:'white',
+                color: "white",
                 // marginLeft: 10,
                 // marginTop: 20,
               }}
@@ -62,7 +80,17 @@ export default function HomePage({navigation}) {
           numColumns={2}
           renderItem={({ item }) => {
             return (
-              <TouchableOpacity onPress={()=>navigation.navigate("Product")} style={styles.prodCont}>
+              <TouchableOpacity
+                onPress={() =>
+                  navigation.navigate(`Prod`,{
+                    title : item.title,
+                    description : item.description,
+                    price : item.price,
+                    imgs : item.imgs
+                  })
+                }
+                style={styles.prodCont}
+              >
                 <Image style={styles.prodImg} source={item.imgs[0]} />
                 <Text style={styles.prodTitle}>{item.title}</Text>
                 <Text style={styles.prodPrice}>{item.price}</Text>
